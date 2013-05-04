@@ -1,0 +1,30 @@
+/* add -fluid at the end of images url if you use the images resizing script */
+
+.slide-1 {
+	background-image: url(img-demo/headers/slides/slide-1.html);
+	/*background-image: url(img-demo/headers/slides/slide-1.jpg);*/
+}
+
+.slide-2 {
+	background-image: url(img-demo/headers/slides/slide-2.html);
+}
+
+.slide-3 {
+	background-image: url(img-demo/headers/slides/slide-3.html);
+}
+
+.header-img-room {
+	background-image: url(img-demo/headers/room.html);
+}
+
+.header-img-location {
+	background-image: url(img-demo/headers/location.html);
+}
+
+.header-img-contact {
+	background-image: url(img-demo/headers/contact.html);
+}
+
+.header-img-reservation {
+	background-image: url(img-demo/headers/book.html);
+}

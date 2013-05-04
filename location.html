@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Palace - Location</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" type="text/css" href="header-images.css" />
+	<script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
+	<script src="js/jQueryRotateCompressed.2.1.js" type="text/javascript"></script>
+	<script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
+	<script src="js/pcode.js" type="text/javascript"></script>
+	<script src="js/palace-functions.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		timthumb_header_image();
+		navigation();
+		map();
+		demo();
+	});
+	</script>
+</head>
+
+<body>
+
+	<!-- begin header -->
+	<div id="header" class="header-smaller">
+		
+		<div id="header-img">
+			<div class="header-img-location"></div>
+		</div>
+		
+		<!-- begin site navigation and logo -->
+		<div id="navigation">
+			<div id="bg-logo">
+				<a id="logo" href="index-2.html">
+				<!-- paramaters about the logo are in the style.css file -->
+				</a>
+				<a id="nav-button" href="#"><span id="nav-arrow"></span></a>
+				<div id="nav-container">
+					<ul id="nav-list">
+						<li><a href="index-2.html">Home</a></li>
+						<li><a href="rooms-list.html">Rooms</a></li>
+						<li><a href="location.html">Location</a></li>
+						<li><a href="contact.html">Contact</a></li>
+						<li><a href="reservation.html">Book online!</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- end site navigation and logo -->
+		
+		<!-- begin strip-top -->
+		<div id="strip-top">
+			<a id="button-settings-1" href="#"></a>
+			<ul id="strip-top-icons">
+				<li class="strip-top-icons-separator"></li>
+				<li><a class="icon-feed" href="#"></a></li>
+				<li><a class="icon-facebook" href="#"></a></li>
+				<li><a class="icon-twitter" href="#"></a></li>
+				<li class="strip-top-icons-separator"></li>
+				<li><a class="icon-flag-uk" href="#"></a></li>
+				<li><a class="icon-flag-fr" href="#"></a></li>
+				<li class="strip-top-icons-separator"></li>
+			</ul>
+		</div>
+		<!-- end strip-top -->
+		
+		<div id="strip-legend">
+			Amazing location!
+		</div>
+		
+	</div>
+	<!-- end header -->
+	
+	<!-- begin content -->
+	<div id="content">
+	
+		<div class="separator"></div>
+		
+		<p id="first-lines">
+			The Palace is in the very heart of Paris! So you'll have everything close to you: La Tour Eiffel, Les Jardins du Trocad&eacute;ro, Les Champs &Eacute;lys&eacute;s and of course lorem ipsum dolor sit amet consectetur.
+		</p>
+		
+		<div class="separator"></div>
+		
+		<form id="form-location" action="#">
+			<p>
+				<label class="label-address"><!--for="input-address"-->Address (eg: 1 rue Benjamin Franklin, Paris)</label>
+				<input id="input-address" class="palace-input-text palace-input-text-big" type="text" value="" />
+			</p>
+			<p>
+				<a href="#" id="button-get-directions" class="button button-red width-half">GET ITINERARY FROM ADDRESS ABOVE</a>
+			</p>
+			<p>
+				<a href="#" id="button-get-directions-current" class="button button-red width-half">GET ITINERARY FROM CURRENT LOCATION</a>
+			</p>
+		</form>
+		
+		<div id="map-canvas"></div>
+		
+		<div class="separator"></div>
+		
+		<p id="copyright">
+			<a id="button-settings-2" href="#"></a>
+			<span id="panel-settings-2">
+				<a class="color-setting demo-cyan" href="#"></a>
+				<a class="color-setting demo-purple" href="#"></a>
+				<a class="color-setting demo-red" href="#"></a>
+				<a class="color-setting demo-blue" href="#"></a>
+				<a class="color-setting demo-orange" href="#"></a>
+				<a class="color-setting demo-green" href="#"></a>
+				<a class="color-setting demo-grey" href="#"></a>
+			</span>
+			&copy; 2012 - Designed by <a class="demo-link" href="http://themeforest.net/user/AurelienD?ref=AurelienD">AurelienD</a>
+		</p>
+		
+	</div>
+	<!-- end content -->
+	
+	<div id="panel-settings-1">
+		<a class="color-setting demo-cyan" href="#"></a>
+		<a class="color-setting demo-purple" href="#"></a>
+		<a class="color-setting demo-red" href="#"></a>
+		<a class="color-setting demo-blue" href="#"></a>
+		<a class="color-setting demo-orange" href="#"></a>
+		<a class="color-setting demo-green" href="#"></a>
+		<a class="color-setting demo-grey" href="#"></a>
+	</div>
+	
+</body>
+
+
+</html>

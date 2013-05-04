@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Palace - Room details</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" type="text/css" href="header-images.css" />
+	<link rel="stylesheet" type="text/css" href="photoswipe.css" />
+	<script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
+	<script src="js/jQueryRotateCompressed.2.1.js" type="text/javascript"></script>
+	<script src="js/klass.min.js" type="text/javascript" ></script>
+	<script src="js/code.photoswipe-3.0.4.min.js" type="text/javascript" ></script>
+	<script src="js/pcode.js" type="text/javascript"></script>
+	<script src="js/palace-functions.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		timthumb_header_image();
+		navigation();
+		gallery();
+		demo();
+	});
+	</script>
+</head>
+
+<body>
+
+	<!-- begin header -->
+	<div id="header" class="header-smaller">
+		
+		<div id="header-img">
+			<div class="header-img-room"></div>
+		</div>
+		
+		<!-- begin site navigation and logo -->
+		<div id="navigation">
+			<div id="bg-logo">
+				<a id="logo" href="index-2.html">
+				<!-- paramaters about the logo are in the style.css file -->
+				</a>
+				<a id="nav-button" href="#"><span id="nav-arrow"></span></a>
+				<div id="nav-container">
+					<ul id="nav-list">
+						<li><a href="index-2.html">Home</a></li>
+						<li><a href="rooms-list.html">Rooms</a></li>
+						<li><a href="location.html">Location</a></li>
+						<li><a href="contact.html">Contact</a></li>
+						<li><a href="reservation.html">Book online!</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- end site navigation and logo -->
+		
+		<!-- begin strip-top -->
+		<div id="strip-top">
+			<a id="button-settings-1" href="#"></a>
+			<ul id="strip-top-icons">
+				<li class="strip-top-icons-separator"></li>
+				<li><a class="icon-feed" href="#"></a></li>
+				<li><a class="icon-facebook" href="#"></a></li>
+				<li><a class="icon-twitter" href="#"></a></li>
+				<li class="strip-top-icons-separator"></li>
+				<li><a class="icon-flag-uk" href="#"></a></li>
+				<li><a class="icon-flag-fr" href="#"></a></li>
+				<li class="strip-top-icons-separator"></li>
+			</ul>
+		</div>
+		<!-- end strip-top -->
+		
+		<div id="strip-legend">
+			The Deluxe Suite
+		</div>
+		
+	</div>
+	<!-- end header -->
+	
+	<!-- begin content -->
+	<div id="content">
+	
+		<div class="separator"></div>
+		
+		<p id="first-lines">
+			The Deluxe Suite is awesome, big, comfortable, gorgeous... There aren't enough words to describe it...
+		</p>
+		
+		<div class="separator"></div>
+
+		<h2>This is a nice gallery</h2>
+		
+		<div id="gallery">
+			<a href="img-demo/room-details/big-images/img-1.jpg"><img src="img-demo/room-details/thumbnails/thumb-1.jpg" alt="A lovely room" /></a>
+			<a href="img-demo/room-details/big-images/img-2.jpg"><img src="img-demo/room-details/thumbnails/thumb-2.jpg" alt="Look at that room!" /></a>
+			<a href="img-demo/room-details/big-images/img-3.jpg"><img src="img-demo/room-details/thumbnails/thumb-3.jpg" alt="This room is awesome!" /></a>
+			<a href="img-demo/room-details/big-images/img-4.jpg"><img src="img-demo/room-details/thumbnails/thumb-4.jpg" alt="A nice room" /></a>
+			<a href="img-demo/room-details/big-images/img-3.jpg"><img src="img-demo/room-details/thumbnails/thumb-3.jpg" alt="A lovely room" /></a>
+			<a href="img-demo/room-details/big-images/img-1.jpg"><img src="img-demo/room-details/thumbnails/thumb-1.jpg" alt="Look at that room!" /></a>
+		</div>
+		
+		<div class="clear"></div>
+		
+		<h2>Those are lists...</h2>
+		<p>
+			The following list breaks in 4,2,or 1 column(s), depending on the size of the screen:
+		</p>
+		
+		<!-- begin block-1-or-2-or-4-columns -->
+		<div class="block-1-or-2-or-4-columns">
+		
+			<!-- begin block-1 -->
+			<div class="block-1 block-list">
+				<ul class="list-bullets list-bullets-red">
+					<li>HD TV</li>
+					<li>Free Wifi</li>
+				</ul>
+			</div>
+			<!-- end block-1 -->
+			
+			<!-- begin block-2 -->
+			<div class="block-2 block-list">
+				<ul class="list-bullets list-bullets-red">
+					<li>Breakfast included</li>
+					<li>24/24 room service</li>
+				</ul>
+			</div>
+			<!-- end block-2 -->
+			
+			<!-- begin block-3 -->
+			<div class="block-3 block-list">
+				<ul class="list-bullets list-bullets-red">
+					<li>Open buffet</li>
+					<li>Mini-bar</li>
+				</ul>
+			</div>
+			<!-- end block-3 -->
+			
+			<!-- begin block-4 -->
+			<div class="block-4 block-list">
+				<ul class="list-bullets list-bullets-red">
+					<li>Free car park</li>
+					<li>Smoking room</li>
+				</ul>
+			</div>
+			<!-- end block-4 -->
+			
+		</div>
+		<!-- end block-1-or-2-or-4-columns -->
+		
+		<div class="clear"></div>
+		
+		<p>This is a list with an alternate background color :</p>
+		
+		<!-- begin block-1-or-2-or-4-columns -->
+		<div class="block-1-or-2-or-4-columns">
+		
+			<!-- begin block-1 -->
+			<div class="block-1 block-list">
+				<ul class="list-alternate list-bullets-red">
+					<li>HD TV</li>
+					<li class="list-item-even">Free Wifi</li>
+				</ul>
+			</div>
+			<!-- end block-1 -->
+			
+			<!-- begin block-2 -->
+			<div class="block-2 block-list">
+				<ul class="list-alternate list-bullets-red">
+					<li>Breakfast included</li>
+					<li class="list-item-even">24/24 room service</li>
+				</ul>
+			</div>
+			<!-- end block-2 -->
+			
+			<!-- begin block-3 -->
+			<div class="block-3 block-list">
+				<ul class="list-alternate list-bullets-red">
+					<li>Open buffet</li>
+					<li class="list-item-even">Mini-bar</li>
+				</ul>
+			</div>
+			<!-- end block-3 -->
+			
+			<!-- begin block-4 -->
+			<div class="block-4 block-list">
+				<ul class="list-alternate list-bullets-red">
+					<li>Free car park</li>
+					<li class="list-item-even">Smoking room</li>
+				</ul>
+			</div>
+			<!-- end block-4 -->
+			
+		</div>
+		<!-- end block-1-or-2-or-4-columns -->
+		
+		<div class="clear"></div>
+		
+		<h2>And this is a simple table:</h2>
+		
+		<!-- begin table -->
+		<table class="table-palace-styled">
+			<tr>
+				<th>Season</th><th>Single room</th><th>Double room</th><th>Family room</th>
+			</tr>
+			<tr class="tr-even">
+				<td>from 01/09 to 30/04</td><td>$99</td><td>$149</td><td>$250</td>
+			</tr>
+			<tr>
+				<td>from 01/05 to 30/06</td><td>$129</td><td>$169</td><td>$300</td>
+			</tr>
+			<tr class="tr-even">
+				<td>from 01/07 to 31/08</td><td>$149</td><td>$199</td><td>$400</td>
+			</tr>
+		</table>
+		<!-- end table -->
+		
+		<div class="separator"></div>
+		
+		<p id="copyright">
+			<a id="button-settings-2" href="#"></a>
+			<span id="panel-settings-2">
+				<a class="color-setting demo-cyan" href="#"></a>
+				<a class="color-setting demo-purple" href="#"></a>
+				<a class="color-setting demo-red" href="#"></a>
+				<a class="color-setting demo-blue" href="#"></a>
+				<a class="color-setting demo-orange" href="#"></a>
+				<a class="color-setting demo-green" href="#"></a>
+				<a class="color-setting demo-grey" href="#"></a>
+			</span>
+			&copy; 2012 - Designed by <a class="demo-link" href="http://themeforest.net/user/AurelienD?ref=AurelienD">AurelienD</a>
+		</p>
+		
+	</div>
+	<!-- end content -->
+	
+	<div id="panel-settings-1">
+		<a class="color-setting demo-cyan" href="#"></a>
+		<a class="color-setting demo-purple" href="#"></a>
+		<a class="color-setting demo-red" href="#"></a>
+		<a class="color-setting demo-blue" href="#"></a>
+		<a class="color-setting demo-orange" href="#"></a>
+		<a class="color-setting demo-green" href="#"></a>
+		<a class="color-setting demo-grey" href="#"></a>
+	</div>
+	
+</body>
+
+
+</html>

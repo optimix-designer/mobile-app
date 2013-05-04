@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Palace - Reservation</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" type="text/css" href="header-images.css" />
+	<link rel="stylesheet" type="text/css" href="jquery.datepick.css" />
+	<script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
+	<script src="js/jQueryRotateCompressed.2.1.js" type="text/javascript"></script>
+	<script src="js/jquery.datepick.pack.js" type="text/javascript"></script>
+	<script src="js/jquery.validate.min.js" type="text/javascript"></script>
+	<script src="js/jquery.form.js" type="text/javascript"></script>
+	<script src="js/pcode.js" type="text/javascript"></script>
+	<script src="js/palace-functions.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		timthumb_header_image();
+		navigation();
+		set_datepicker();
+		validation();
+		demo();
+	});
+	</script>
+</head>
+
+<body>
+
+	<!-- begin header -->
+	<div id="header" class="header-smaller">
+		
+		<div id="header-img">
+			<div class="header-img-reservation"></div>
+		</div>
+		
+		<!-- begin site navigation and logo -->
+		<div id="navigation">
+			<div id="bg-logo">
+				<a id="logo" href="index-2.html">
+				<!-- paramaters about the logo are in the style.css file -->
+				</a>
+				<a id="nav-button" href="#"><span id="nav-arrow"></span></a>
+				<div id="nav-container">
+					<ul id="nav-list">
+						<li><a href="index-2.html">Home</a></li>
+						<li><a href="rooms-list.html">Rooms</a></li>
+						<li><a href="location.html">Location</a></li>
+						<li><a href="contact.html">Contact</a></li>
+						<li><a href="reservation.html">Book online!</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- end site navigation and logo -->
+		
+		<!-- begin strip-top -->
+		<div id="strip-top">
+			<a id="button-settings-1" href="#"></a>
+			<ul id="strip-top-icons">
+				<li class="strip-top-icons-separator"></li>
+				<li><a class="icon-feed" href="#"></a></li>
+				<li><a class="icon-facebook" href="#"></a></li>
+				<li><a class="icon-twitter" href="#"></a></li>
+				<li class="strip-top-icons-separator"></li>
+				<li><a class="icon-flag-uk" href="#"></a></li>
+				<li><a class="icon-flag-fr" href="#"></a></li>
+				<li class="strip-top-icons-separator"></li>
+			</ul>
+		</div>
+		<!-- end strip-top -->
+		
+		<div id="strip-legend">
+			Request a reservation
+		</div>
+		
+	</div>
+	<!-- end header -->
+	
+	<!-- begin content -->
+	<div id="content">
+	
+		<div class="separator"></div>
+		
+		<p id="first-lines">
+			We have 4 different types of rooms to suit everyone’s needs: single room, double room, family room, and deluxe suite... So fill in the form below!
+		</p>
+		
+		<div class="separator"></div>
+
+		<!-- begin form-reservation -->
+		<form id="form-reservation" method="post" action="http://s3e2.com/theme-forest/the-palace-mobile-html/reservation.php">
+			
+			<p>
+				<label for="input-name">Name:</label>
+				<input id="input-name" class="palace-input-text required" name="input-name" type="text" />
+			</p>
+			
+			<p>
+				<label for="input-e-mail">E-mail:</label>
+				<input id="input-e-mail" class="palace-input-text required email" name="input-e-mail" type="text" />
+			</p>
+			
+			<p>
+				<label for="select-type-of-room">Type of room:</label>
+				<select id="select-type-of-room" class="palace-select required" name="select-type-of-room">
+					<option value="">Select a type of room</option>
+					<option value="Single room">Single room</option>
+					<option value="Double room">Double room</option>
+					<option value="Family room">Family room</option>
+					<option value="Deluxe room">Deluxe suite</option>
+				</select>
+			</p>
+				
+			<p class="column-120">
+				<label for="select-n-adults">Adults:</label>
+				<select id="select-n-adults" class="palace-select palace-select-small" name="select-n-adults">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</p>
+
+			<p class="column-120 column-last">
+				<label for="select-n-children">Children:</label>
+				<select id="select-n-children" class="palace-select palace-select-small" name="select-n-children">
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+				</select>
+			</p>
+				
+			<div class="clear"></div>
+			
+			<p>
+				<b><i>Check-in date:</i></b>
+				<a href="#" id="button-show-calendar" class="button button-red width-half">SHOW CALENDAR</a>
+				<a href="#" id="button-hide-calendar" class="button button-red width-half">HIDE CALENDAR</a>
+			</p>
+			
+			<div id="datepick-wrapper"></div>
+			
+			<p>
+				<i>- or select a day, a month and a year:</i>
+			</p>
+			
+			<p class="column-73">
+				<label for="select-check-in-day">Day:</label>
+				<select id="select-check-in-day" class="palace-select palace-select-very-small" name="select-check-in-day">
+					<option value="1">01</option><option value="2">02</option><option value="3">03</option><option value="4">04</option><option value="5">05</option>
+					<option value="6">06</option><option value="7">07</option><option value="8">08</option><option value="9">09</option><option value="10">10</option> 
+					<option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option>
+					<option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option> 
+					<option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option>
+					<option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option> 
+					<option value="31">31</option>
+				</select>
+			</p>
+
+			<p class="column-73">
+				<label for="select-check-in-month">Month:</label>
+				<select id="select-check-in-month" class="palace-select palace-select-very-small" name="select-check-in-month">
+					<option value="1">01 - January</option>
+					<option value="2">02 - February</option>
+					<option value="3">03 - March</option>
+					<option value="4">04 - April</option>
+					<option value="5">05 - May</option>
+					<option value="6">06 - June</option>
+					<option value="7">07 - July</option>
+					<option value="8">08 - August</option>
+					<option value="9">09 - September</option>
+					<option value="10">10 - October</option>
+					<option value="11">11 - November</option>
+					<option value="12">12 - December</option>
+				</select>
+			</p>
+			
+			<p class="column-73 column-last">			
+				<label for="select-check-in-year">Year:</label>
+				<select id="select-check-in-year" class="palace-select palace-select-very-small" name="select-check-in-year">
+					<option value="2012">12 - 2012</option>
+					<option value="2013">13 - 2013</option>
+				</select>
+			</p>
+			
+			<div class="clear"></div>
+			
+			<p>
+				<label for="input-n-nights">Number of nights:</label>
+				<input id="input-n-nights" class="palace-input-text-small required number" name="input-n-nights" type="text" />
+			</p>
+			
+			<p>
+				<label for="textarea-message">Additional information:</label>
+				<textarea id="textarea-message" class="palace-textarea" name="textarea-message" rows="10" cols="10"></textarea>
+			</p>
+
+			<p>
+				<input type="submit" class="palace-input-submit button button-red width-half" value="SEND NOW!" />
+			</p>
+			
+			<p class="ajax-loader"></p>
+			
+		</form>
+		<!-- end form-reservation -->
+		
+		<div id="submit-result"></div>
+		
+		<div class="separator"></div>
+		
+		<p id="copyright">
+			<a id="button-settings-2" href="#"></a>
+			<span id="panel-settings-2">
+				<a class="color-setting demo-cyan" href="#"></a>
+				<a class="color-setting demo-purple" href="#"></a>
+				<a class="color-setting demo-red" href="#"></a>
+				<a class="color-setting demo-blue" href="#"></a>
+				<a class="color-setting demo-orange" href="#"></a>
+				<a class="color-setting demo-green" href="#"></a>
+				<a class="color-setting demo-grey" href="#"></a>
+			</span>
+			&copy; 2012 - Designed by <a class="demo-link" href="http://themeforest.net/user/AurelienD?ref=AurelienD">AurelienD</a>
+		</p>
+		
+	</div>
+	<!-- end content -->
+	
+	<div id="panel-settings-1">
+		<a class="color-setting demo-cyan" href="#"></a>
+		<a class="color-setting demo-purple" href="#"></a>
+		<a class="color-setting demo-red" href="#"></a>
+		<a class="color-setting demo-blue" href="#"></a>
+		<a class="color-setting demo-orange" href="#"></a>
+		<a class="color-setting demo-green" href="#"></a>
+		<a class="color-setting demo-grey" href="#"></a>
+	</div>
+	
+</body>
+
+
+</html>
